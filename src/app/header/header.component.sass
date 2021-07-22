@@ -1,0 +1,111 @@
+header
+  color: #4F4F4F
+  background-color: #FFFFFF
+  font-size: 1rem
+  width: 1440px
+  height: 80px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0.5rem 0.5rem
+
+  .search
+    display: flex
+    justify-content: center
+    align-items: center
+    color: inherit
+    background-color: inherit
+    width: 570px
+    height: 50px
+
+    .logo
+      width: 50px
+      height: 50px
+
+    .input-search
+      margin-left: 0.5rem
+      width: 356px
+      height: 25px
+
+    .search-button
+      background: #2F80ED
+      color: #fff
+      width: 80px
+      height: 25px
+      border: solid #2F80ED
+    
+    .search-button:hover
+      cursor: pointer
+      background-color: #5EA2FF
+      border: solid #5EA2FF
+
+    .search-settings
+      width: 24px
+      height: 24px
+      margin: auto 5px
+
+    .search-settings:hover
+      cursor: pointer
+      opacity: 0.8
+
+  .login
+    display: flex
+    justify-content: center
+    align-items: center
+    color: inherit
+    background-color: inherit
+    width: 130px
+  
+    .username
+      width: 102px
+      text-align: right
+      margin: auto 5px
+
+    .avatar
+      width: 24px
+      height: 24px
+      margin: auto auto
+
+    .avatar:hover
+      cursor: pointer
+      opacity: 0.8
+
+@media screen and (max-width: 1300px)
+  header
+    width: 1100px
+  
+  .search
+    width: 400px
+  
+  .login
+    width: 90px
+
+@media screen and (max-width: 900px)
+  header
+    width: 800px
+  
+  .search
+    width: 300px
+  
+  .login
+    width: 60px
+
+@media screen and (max-width: 600px)
+  header
+    width: 500px
+  
+  .search
+    width: 200px
+  
+  .login
+    width: 40px
+
+@media screen and (max-width: 400px)
+  header
+    width: 300px
+  
+  .search
+    width: 100px
+  
+  .login
+    width: 30px
