@@ -1,0 +1,23 @@
+<mat-card *ngIf="item" class="example-card"
+  [item]="item"
+  (click)="openItem.emit(item.id)"
+  >
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{item.snippet.title}}</mat-card-title>
+    <span>{{item.snippet.channelTitle}}</span>
+  </mat-card-header>
+  <img mat-card-image [src]="item.snippet.thumbnails.default.url" [alt]="item.snippet.title" />
+  <mat-card-content>
+    <p>
+      {{ item.snippet.description }}
+    </p>
+    <p>
+      {{ item.snippet.publishedAt }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+   <ng-content></ng-content>
+  </mat-card-actions>
+  <mat-card-footer></mat-card-footer>
+</mat-card>

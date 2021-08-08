@@ -1,0 +1,6 @@
+<app-search-item
+  *ngIf="searchResponse.items"
+  *ngFor="let item of searchResponse.items"
+  [item]="item"
+  (openItem)="onOpenItem($event)"
+></app-search-item>
