@@ -16,8 +16,4 @@ export class SearchItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onOpenItem(id: SearchItem['id']) {
-    console.log(id)
-  }
-
 }

@@ -1,6 +1,7 @@
 <app-search-item
-  *ngFor="let item of searchResponse.items"
+  *ngFor="let item of items | namefilter:filterargs"
   [item]="item"
   (openItem)="onOpenItem($event)"
+  (setFilter)="onFilter($event)"
   >
 </app-search-item>

@@ -1,7 +1,8 @@
 :host
   color: #4F4F4F
-  background-color: #FFFFFF
+  background-color: #E5E5E5
   width: 100%
+  min-height: 80px
   display: flex
   justify-content: center
 
@@ -69,10 +70,12 @@
 
   .settings
     margin-bottom: 15px
+    transition: all 1s
 
     a
       color: blue
       margin: 0 1rem
+      text-decoration: underline
 
       &:hover
         cursor: pointer
@@ -81,3 +84,6 @@
 
       &:active
         color: darkgray
+
+  input
+    border: none

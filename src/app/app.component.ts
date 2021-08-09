@@ -1,6 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { searchRes } from './app.constants';
-import { SearchItem } from './shared/models/search-item.model';
+import { SearchResponse } from './shared/models/search-response.model';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,8 @@ import { SearchItem } from './shared/models/search-item.model';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  @Input() searchRes: String = '';
+  @Input() searchResponse: String = '';
+  @Input() searchRes: SearchResponse = {};
 
-  @Output() searchResponse = searchRes;
+  @Output() items = searchRes.items;
 }

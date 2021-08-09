@@ -26,8 +26,8 @@
   </div>
   <div class="settings" *ngIf="showSettings">
     <span>Sorting by:</span>
-    <a (click)="sortByDate()">date</a>
-    <a (click)="sortByCount()">count of view</a>
+    <a (click)="sortBy('date')">date</a>
+    <a (click)="sortBy('count')">count of view</a>
     <a (click)="filter(sentance)">by word of sentance</a>
     <input
       class="input-sentance"

@@ -3,16 +3,18 @@
   (click)="openItem.emit(item.id)"
   >
   <img mat-card-image [src]="item.snippet.thumbnails.medium.url" [alt]="item.snippet.title" />
+  <div class="mat-icons">
+    <mat-icon class="material-icons-outlined">visibility</mat-icon>
+    <span>{{item.statistics.viewCount}}</span>
+    <mat-icon class="material-icons-outlined">thumb_up</mat-icon>
+    <span>{{item.statistics.likeCount}}</span>
+    <mat-icon class="material-icons-outlined">thumb_down</mat-icon>
+    <span>{{item.statistics.dislikeCount}}</span>
+    <mat-icon class="material-icons-outlined">comment</mat-icon>
+    <span>{{item.statistics.commentCount}}</span>
+  </div>
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{item.snippet.title}}</mat-card-title>
   </mat-card-header>
-  <mat-card-content>
-    <p>{{item.snippet.channelTitle}}</p>
-    <p>{{ item.snippet.publishedAt }}</p>
-  </mat-card-content>
-  <mat-card-actions>
-   <ng-content></ng-content>
-  </mat-card-actions>
-  <mat-card-footer></mat-card-footer>
+  <button mat-raised-button color="primary">more...</button>
 </mat-card>

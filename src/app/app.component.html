@@ -1,6 +1,6 @@
-<app-header (searchRes)="searchRes"></app-header>
+<app-header (searchResponse)="searchResponse"></app-header>
 <app-search-response
-  *ngIf="searchResponse"
-  [searchResponse]="searchResponse">
+  *ngIf="searchRes"
+  [items]="items">
 </app-search-response>
 

@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SearchItem } from '../../shared/models/search-item.model';
-import { SearchResponse } from '../../shared/models/search-response.model';
 
 @Component({
   selector: 'app-search-response',
@@ -8,7 +7,11 @@ import { SearchResponse } from '../../shared/models/search-response.model';
   styleUrls: ['./search-response.component.sass']
 })
 export class SearchResponseComponent implements OnInit {
-  @Input() searchResponse: SearchResponse = {};
+  @Input() items: SearchItem[] = [];
+  @Input() sort: string = '';
+  @Input() filter: string = '';
+
+  filterargs = this.filter;
 
   constructor() { }
 
@@ -17,5 +20,9 @@ export class SearchResponseComponent implements OnInit {
   onOpenItem(id: SearchItem['id']) {
     console.log('https://www.youtube.com/watch?v=' + id)
   }
+
+  onFilter(sentance: any) {
+    console.log(sentance)
+    this.filter = sentance }
 
 }

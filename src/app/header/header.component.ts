@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,11 +10,14 @@ export class HeaderComponent {
   sentance: string = "";
   showSettings = false;
 
+  @Output() setFilter = new EventEmitter<string>();
+
   setResponse(response: string) { console.log('Response:', response) }
 
   toggleSettings() { this.showSettings = !this.showSettings }
 
-  sortByDate() { console.log('by date') }
-  sortByCount() { console.log('by count') }
-  filter(sentance: string) { console.log('Sentance:', sentance) }
+  sortBy(by: string) { console.log(by) }
+
+  filter(sentance: string) { console.log('Sentance:', sentance)
+  this.setFilter.emit(sentance) }
 }
