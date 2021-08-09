@@ -1,1 +1,6 @@
-<p>app works!</p>
+<app-header (searchRes)="searchRes"></app-header>
+<app-search-response
+  *ngIf="searchResponse"
+  [searchResponse]="searchResponse">
+</app-search-response>
+

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent {
+  response: string = "";
   title = 'youtube-header'
+
+  setResponse(response: string) {
+    console.log('Response:', response)
+  }
 }

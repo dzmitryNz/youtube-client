@@ -7,13 +7,17 @@ import { SearchItem } from '../../shared/models/search-item.model';
   styleUrls: ['./search-item.component.sass']
 })
 export class SearchItemComponent implements OnInit {
-  @Input() items?: SearchItem;
+  @Input() item!: SearchItem;
 
   @Output() openItem = new EventEmitter<SearchItem['id']>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onOpenItem(id: SearchItem['id']) {
+    console.log(id)
   }
 
 }

@@ -15,7 +15,7 @@ export class SearchResponseComponent implements OnInit {
   ngOnInit(): void {}
 
   onOpenItem(id: SearchItem['id']) {
-    console.log(id)
+    console.log('https://www.youtube.com/watch?v=' + id)
   }
 
 }

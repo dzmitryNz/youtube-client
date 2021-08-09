@@ -1,8 +1,19 @@
 <header>
   <div class="search">
     <img class="logo" src='../../assets/youtube-logo.svg'>
-    <input class="input-search" type="search" placeholder="What are you want to find out?">
-    <button class="search-button" type="submit">search</button>
+    <input
+      class="input-search"
+      type="search"
+      placeholder="What are you want to find out?"
+      [(ngModel)]="response"
+    >
+    <button
+      class="search-button"
+      type="submit"
+      (click)="setResponse(response)"
+    >
+      search
+    </button>
     <img class="search-settings" src='../../assets/search_settings.svg'>
   </div>
   <div class="login">
