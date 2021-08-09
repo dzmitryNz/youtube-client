@@ -14,10 +14,26 @@
     >
       search
     </button>
-    <img class="search-settings" src='../../assets/search_settings.svg'>
-  </div>
+    <img
+      class="search-settings"
+      src='../../assets/search_settings.svg'
+      (click)="toggleSettings()"
+      >
   <div class="login">
     <span class="username">YourName</span>
     <img class="avatar" src='../../assets/login.svg'>
+  </div>
+  </div>
+  <div class="settings" *ngIf="showSettings">
+    <span>Sorting by:</span>
+    <a (click)="sortByDate()">date</a>
+    <a (click)="sortByCount()">count of view</a>
+    <a (click)="filter(sentance)">by word of sentance</a>
+    <input
+      class="input-sentance"
+      type="search"
+      [(ngModel)]="sentance"
+      (change)="filter(sentance)"
+    >
   </div>
 </header>

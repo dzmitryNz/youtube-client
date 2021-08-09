@@ -1,13 +1,9 @@
-header
+:host
   color: #4F4F4F
   background-color: #FFFFFF
-  font-size: 1rem
   width: 100%
-  height: 80px
   display: flex
   justify-content: center
-  align-items: center
-  margin: 0.5rem 0
 
   .search
     display: flex
@@ -17,6 +13,7 @@ header
     background-color: inherit
     width: 570px
     height: 50px
+    margin-top: 15px
 
     .logo
       width: 50px
@@ -69,3 +66,18 @@ header
     .avatar:hover
       cursor: pointer
       opacity: 0.8
+
+  .settings
+    margin-bottom: 15px
+
+    a
+      color: blue
+      margin: 0 1rem
+
+      &:hover
+        cursor: pointer
+        text-decoration: none
+        color: black
+
+      &:active
+        color: darkgray

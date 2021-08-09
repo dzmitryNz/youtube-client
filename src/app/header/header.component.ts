@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   response: string = "";
-  title = 'youtube-header'
+  sentance: string = "";
+  showSettings = false;
 
-  setResponse(response: string) {
-    console.log('Response:', response)
-  }
+  setResponse(response: string) { console.log('Response:', response) }
+
+  toggleSettings() { this.showSettings = !this.showSettings }
+
+  sortByDate() { console.log('by date') }
+  sortByCount() { console.log('by count') }
+  filter(sentance: string) { console.log('Sentance:', sentance) }
 }
