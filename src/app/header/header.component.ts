@@ -6,18 +6,20 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent {
-  response: string = "";
-  sentance: string = "";
+  searchReq: string = "";
+  sentence: string = "";
   showSettings = false;
 
   @Output() setFilter = new EventEmitter<string>();
 
-  setResponse(response: string) { console.log('Response:', response) }
+  setRequest(searchReq: string) { console.log('request:', searchReq) }
 
   toggleSettings() { this.showSettings = !this.showSettings }
 
+  accountSettings() { this.showSettings = !this.showSettings }
+
   sortBy(by: string) { console.log(by) }
 
-  filter(sentance: string) { console.log('Sentance:', sentance)
-  this.setFilter.emit(sentance) }
+  filter(sentence: string) { console.log('Sentance:', sentence)
+  this.setFilter.emit(sentence) }
 }

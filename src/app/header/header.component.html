@@ -5,35 +5,41 @@
       class="input-search"
       type="search"
       placeholder="What are you want to find out?"
-      [(ngModel)]="response"
+      [(ngModel)]="searchReq"
     >
     <button
       class="search-button"
       type="submit"
-      (click)="setResponse(response)"
+      (click)="setRequest(searchReq)"
     >
       search
     </button>
-    <img
+    <input
+      type="image"
       class="search-settings"
       src='../../assets/search_settings.svg'
       (click)="toggleSettings()"
-      >
+    />
   <div class="login">
     <span class="username">YourName</span>
-    <img class="avatar" src='../../assets/login.svg'>
+    <input
+      type="image"
+      class="avatar"
+      src='../../assets/login.svg'
+      (click)="accountSettings()"
+    >
   </div>
   </div>
   <div class="settings" *ngIf="showSettings">
     <span>Sorting by:</span>
     <a (click)="sortBy('date')">date</a>
     <a (click)="sortBy('count')">count of view</a>
-    <a (click)="filter(sentance)">by word of sentance</a>
+    <a (click)="filter(sentence)">by word of sentance</a>
     <input
-      class="input-sentance"
+      class="input-sentence"
       type="search"
-      [(ngModel)]="sentance"
-      (change)="filter(sentance)"
+      [(ngModel)]="sentence"
+      (change)="filter(sentence)"
     >
   </div>
 </header>
