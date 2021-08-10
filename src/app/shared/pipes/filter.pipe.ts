@@ -11,8 +11,6 @@ export class TitleFilterPipe implements PipeTransform {
     if (!items || !filter) {
       return items;
     }
-// filter items array, items which match and return true will be
-// kept, false will be filtered out
     // console.log('filter', filter)
     return items.filter(item => item.snippet.title.toLowerCase().includes(filter.toLowerCase()));
     }

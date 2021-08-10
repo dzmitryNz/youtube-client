@@ -22,9 +22,8 @@ export class HeaderComponent {
   accountSettings() { this.showSettings = !this.showSettings }
 
   sort(by: string) {
-    if(by == this.sorted) by=by+'-';
-    this.setSort.emit(by);
-    this.sorted = by;
+    this.sorted = this.sorted === by ? `${by}-` : by ;
+    this.setSort.emit(this.sorted);
     }
 
   filter(sentence: string) { this.setFilter.emit(sentence) }
