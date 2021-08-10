@@ -6,7 +6,7 @@ import { default as resJson } from './shared/res.json';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  @Input() searchRequest: String = '';
 
   @Output() items = resJson.items;
+
 }

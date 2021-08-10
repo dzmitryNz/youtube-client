@@ -3,26 +3,25 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from '../header/header.component';
 import { MaterialModule } from '../shared/material/material.module';
-import { NameFilterPipe } from '../shared/pipes/filter.pipe';
+import { TitleFilterPipe } from '../shared/pipes/filter.pipe';
+import { SortPipe } from '../shared/pipes/sort.pipe';
 import { SearchItemComponent } from './search-item/search-item.component';
-import { SearchResponseComponent } from './search-results/search-results.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     SearchItemComponent,
-    SearchResponseComponent,
-    NameFilterPipe
+    SearchResultsComponent,
+    TitleFilterPipe,
+    SortPipe,
   ],
   imports: [ MaterialModule, BrowserModule, FormsModule ],
   exports: [
     HeaderComponent,
     MaterialModule,
     SearchItemComponent,
-    SearchResponseComponent
+    SearchResultsComponent,
   ]
 })
-export class MainModule {
-
-
- }
+export class MainModule {}

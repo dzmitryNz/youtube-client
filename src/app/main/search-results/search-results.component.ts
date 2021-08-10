@@ -2,18 +2,15 @@ import { Component, Input, OnInit } from '@angular/core';
 import { SearchItem } from '../../shared/models/search-item.model';
 
 @Component({
-  selector: 'app-search-response',
-  templateUrl: './search-response.component.html',
-  styleUrls: ['./search-response.component.sass']
+  selector: 'app-search-results',
+  templateUrl: './search-results.component.html',
+  styleUrls: ['./search-results.component.sass']
 })
-export class SearchResponseComponent implements OnInit {
+export class SearchResultsComponent implements OnInit {
   @Input() items: SearchItem[] = [];
-  @Input() sort: string = '';
-  @Input() filter: string = '';
-
-  filterargs = this.filter;
-
-  constructor() { }
+  @Input() sortby: string = '';
+  @Input() filterargs: string = '';
+  @Input() searchRequest: string = '';
 
   ngOnInit(): void {}
 
@@ -21,8 +18,7 @@ export class SearchResponseComponent implements OnInit {
     console.log('https://www.youtube.com/watch?v=' + id)
   }
 
-  onFilter(sentance: any) {
-    console.log(sentance)
-    this.filter = sentance }
+  filter(sentence: string) { this.filterargs = sentence };
 
+  sort(sortby: string) { this.sortby = sortby };
 }

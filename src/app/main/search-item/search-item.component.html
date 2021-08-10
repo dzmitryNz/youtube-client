@@ -1,4 +1,4 @@
-<mat-card *ngIf="item"
+<mat-card *ngIf="item" [ngStyle]="borderBottom"
   class="example-card"
   (click)="openItem.emit(item.id)"
   >

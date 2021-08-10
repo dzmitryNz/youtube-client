@@ -9,17 +9,23 @@ export class HeaderComponent {
   searchReq: string = "";
   sentence: string = "";
   showSettings = false;
+  sorted: string = '';
 
   @Output() setFilter = new EventEmitter<string>();
+  @Output() setSort = new EventEmitter<string>();
+  @Output() setRequest = new EventEmitter<string>();
 
-  setRequest(searchReq: string) { console.log('request:', searchReq) }
+  request(searchReq: string) { this.setFilter.emit(searchReq) }
 
   toggleSettings() { this.showSettings = !this.showSettings }
 
   accountSettings() { this.showSettings = !this.showSettings }
 
-  sortBy(by: string) { console.log(by) }
+  sort(by: string) {
+    if(by == this.sorted) by=by+'-';
+    this.setSort.emit(by);
+    this.sorted = by;
+    }
 
-  filter(sentence: string) { console.log('Sentance:', sentence)
-  this.setFilter.emit(sentence) }
+  filter(sentence: string) { this.setFilter.emit(sentence) }
 }
