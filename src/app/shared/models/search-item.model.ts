@@ -1,3 +1,9 @@
+export interface Thumbnail {
+  url: string;
+  width: number;
+  height: number;
+}
+
 export interface SearchItem {
   kind: string;
   etag: string;
@@ -8,31 +14,11 @@ export interface SearchItem {
     title: string;
     description: string;
     thumbnails: {
-      default: {
-        url: string;
-        width: number;
-        height: number;
-      },
-      medium: {
-        url: string;
-        width: number;
-        height: number;
-      },
-      high: {
-        url: string;
-        width: number;
-        height: number;
-      },
-      standard: {
-        url: string;
-        width: number;
-        height: number;
-      },
-      maxres: {
-        url: string;
-        width: number;
-        height: number;
-      }
+      default: Thumbnail,
+      medium: Thumbnail,
+      high: Thumbnail,
+      standard: Thumbnail,
+      maxres: Thumbnail
     };
     channelTitle: string;
     tags: string[];

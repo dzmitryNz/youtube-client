@@ -1,5 +1,5 @@
-import { searchRes } from "./app.constants";
-import { SearchItem } from "./shared/models/search-item.model";
+import { searchRes } from "./constants";
+import { SearchItem } from "./models/search-item.model";
 
 export class DataService{
 

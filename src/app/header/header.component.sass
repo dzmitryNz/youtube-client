@@ -1,6 +1,8 @@
+@import '../../var.sass'
+
 :host
-  color: #4F4F4F
-  background-color: #E5E5E5
+  color: $primary-color
+  background-color: $secondary-background-color
   width: 100%
   min-height: 80px
   display: flex
@@ -26,16 +28,16 @@
       height: 25px
 
     .search-button
-      background: #2F80ED
-      color: #fff
+      background: $primary-button-color
+      color: $primary-button-text
       width: 80px
       height: 25px
-      border: solid #2F80ED
+      border: solid $primary-button-color
 
     .search-button:hover
       cursor: pointer
-      background-color: #5EA2FF
-      border: solid #5EA2FF
+      background-color: $hovered-button-color
+      border: solid $hovered-button-color
 
     .search-settings
       width: 24px
@@ -73,17 +75,17 @@
     transition: all 1s
 
     a
-      color: blue
+      color: $primary-button-color
       margin: 0 1rem
       text-decoration: underline
 
       &:hover
         cursor: pointer
         text-decoration: none
-        color: black
+        color: $hovered-button-color
 
       &:active
-        color: darkgray
+        color: $active-button-color
 
   input
     border: none
