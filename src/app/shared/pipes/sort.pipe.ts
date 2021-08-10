@@ -9,9 +9,6 @@ import { SearchItem } from '../models/search-item.model';
 export class SortPipe implements PipeTransform {
   transform(items: SearchItem[], sortby: string): any {
     if (!items || !sortby) return items;
-    let index: string = ''
-
-
     switch(sortby) {
       case 'count':
         return items.sort((a, b) => Number(a.statistics.viewCount) - Number(b.statistics.viewCount));
