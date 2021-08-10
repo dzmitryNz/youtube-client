@@ -1,2 +1,2 @@
-export const REDDAYS = 180;
-export const GREENDAYS = 7;
+export const REDDAYS = 900;
+export const GREENDAYS = 700;
