@@ -1,6 +1,6 @@
 <app-header (searchRequest)="searchRequest" (setFilter)="filter($event)" (setSort)="sort($event)" ></app-header>
 <app-search-item
-  *ngFor="let item of items | titlefilter:filterargs | sortpipe:sortby"
+  *ngFor="let item of filteredItems"
   [item]="item"
   (openItem)="onOpenItem($event)"
   >

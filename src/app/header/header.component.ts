@@ -9,7 +9,7 @@ export class HeaderComponent {
   searchReq: string = "";
   sentence: string = "";
   showSettings = false;
-  sorted: string = '';
+  sortedBy: string = '';
 
   @Output() setFilter = new EventEmitter<string>();
   @Output() setSort = new EventEmitter<string>();
@@ -22,8 +22,8 @@ export class HeaderComponent {
   accountSettings() { this.showSettings = !this.showSettings }
 
   sort(by: string) {
-    this.sorted = this.sorted === by ? `${by}-` : by ;
-    this.setSort.emit(this.sorted);
+    this.sortedBy = this.sortedBy === by ? `${by}-` : by ;
+    this.setSort.emit(this.sortedBy);
     }
 
   filter(sentence: string) { this.setFilter.emit(sentence) }
