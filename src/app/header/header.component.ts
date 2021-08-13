@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent {
-  searchReq: string = "";
+  searchStr: string = "";
   sentence: string = "";
   showSettings = false;
   sortedBy: string = '';
@@ -15,7 +15,7 @@ export class HeaderComponent {
   @Output() setSort = new EventEmitter<string>();
   @Output() setRequest = new EventEmitter<string>();
 
-  request(searchReq: string) { this.setFilter.emit(searchReq) }
+  request(searchStr: string) { if(searchStr) this.setRequest.emit(searchStr) }
 
   toggleSettings() { this.showSettings = !this.showSettings }
 

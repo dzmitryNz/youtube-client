@@ -1,4 +1,4 @@
-<app-header (searchRequest)="searchRequest" (setFilter)="filter($event)" (setSort)="sort($event)" ></app-header>
+<app-header (setRequest)="onSearchRequest($event)" (setFilter)="filter($event)" (setSort)="sort($event)" ></app-header>
 <app-search-item
   *ngFor="let item of filteredItems"
   [item]="item"

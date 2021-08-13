@@ -5,12 +5,12 @@
       class="input-search"
       type="searchReq"
       placeholder="What are you want to find out?"
-      [(ngModel)]="searchReq"
+      [(ngModel)]="searchStr"
     >
     <button
       class="search-button"
       type="submit"
-      (click)="request(searchReq)"
+      (click)="request(searchStr)"
     >
       search
     </button>
@@ -39,6 +39,7 @@
       class="input-sentence"
       type="search"
       placeholder="filter by"
+      [(ngModel)]="sentence"
       (change)="filter(sentence)"
     >
   </div>
