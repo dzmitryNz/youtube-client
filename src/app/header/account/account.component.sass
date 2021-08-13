@@ -1,0 +1,58 @@
+@import '../../../var.sass'
+
+:host
+  .account
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    color: inherit
+    background-color: inherit
+    width: 160px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+
+    .username
+      width: 102px
+      text-align: right
+      margin: auto 5px
+
+    .avatar
+      width: 24px
+      height: 24px
+      margin: auto auto
+
+    .avatar:hover
+      cursor: pointer
+      opacity: 0.8
+
+  .profile
+    margin-bottom: 15px
+    transition: all 1s
+    display: flex
+    flex-direction: column
+    position: absolute
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
+    background-color: $secondary-background-color
+    margin-left: 100px
+    padding: 10px
+
+  a
+    color: $primary-button-color
+    margin: 0 1rem
+    text-decoration: underline
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+
+    &:hover
+      cursor: pointer
+      text-decoration: none
+      color: $hovered-button-color
+
+    &:active
+      color: $active-button-color
+
+    &::selection
+      background-color: $secondary-background-color

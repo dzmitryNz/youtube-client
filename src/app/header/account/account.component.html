@@ -1,0 +1,14 @@
+<div class="account">
+    <span *ngIf="isLogin" class="username">{{userName}}</span>
+    <input *ngIf="isLogin"
+      type="image"
+      class="avatar"
+      src='../../assets/login.svg'
+      (click)="toggleShowProfile()"
+    >
+  <a class="is-login" (click)="login()">{{ isLogin ? "Logout" : "Login" }}</a>
+</div>
+<div class="profile" *ngIf="showProfile">
+  <a (click)="setting()">somesetting1</a>
+  <a (click)="setting()">somesetting2</a>
+</div>

@@ -22,15 +22,7 @@
       src='../../assets/search_settings.svg'
       (click)="toggleSettings()"
     />
-  <div class="login">
-    <span class="username">YourName</span>
-    <input
-      type="image"
-      class="avatar"
-      src='../../assets/login.svg'
-      (click)="accountSettings()"
-    >
-  </div>
+  <app-account></app-account>
   </div>
   <div class="settings" *ngIf="showSettings">
     <span>Sorting by:</span>

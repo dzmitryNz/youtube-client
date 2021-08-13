@@ -5,7 +5,6 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angul
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class HeaderComponent {
   searchStr: string = "";
@@ -28,8 +27,6 @@ export class HeaderComponent {
   }
 
   toggleSettings() { this.showSettings = !this.showSettings }
-
-  accountSettings() { this.showSettings = !this.showSettings }
 
   sort(by: string) {
     this.sortedBy = this.sortedBy === by ? `${by}-` : by ;

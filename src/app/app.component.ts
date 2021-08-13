@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { default as resJson } from './shared/res.json';
 @Component({
   selector: 'app-root',
