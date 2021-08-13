@@ -6,8 +6,10 @@
       type="searchReq"
       placeholder="What are you want to find out?"
       [(ngModel)]="searchStr"
+      (ngModelChange)="onChangeSearch(searchStr)"
     >
     <button
+      *ngIf="showSearchButton"
       class="search-button"
       type="submit"
       (click)="request(searchStr)"
@@ -40,7 +42,7 @@
       type="search"
       placeholder="filter by"
       [(ngModel)]="sentence"
-      (change)="filter(sentence)"
+      (ngModelChange)="filter(sentence)"
     >
   </div>
 </header>
