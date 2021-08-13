@@ -18,7 +18,6 @@ export class SearchResultsComponent implements OnInit {
   onOpenItem(id: SearchItem['id']) { console.log('https://www.youtube.com/watch?v=' + id) };
 
   onSearchRequest(searchRequest: string) {
-    console.log(searchRequest)
     this.filteredItems = this.items
   }
 
@@ -33,7 +32,7 @@ export class SearchResultsComponent implements OnInit {
   };
 
   sort(sortby: string) {
-    if (!this.items || !sortby) this.filteredItems = this.items;
+    if (!this.filteredItems || !sortby) this.filteredItems = this.filteredItems;
     switch(sortby) {
       case 'count':
         this.filteredItems = this.filteredItems.sort((a, b) => Number(a.statistics.viewCount) - Number(b.statistics.viewCount));
