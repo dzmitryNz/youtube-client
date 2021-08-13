@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +15,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     SearchResultsComponent,
     AccountComponent,
   ],
-  imports: [ MaterialModule, BrowserModule, FormsModule ],
+  imports: [ MaterialModule, BrowserModule, FormsModule, HttpClientModule ],
   exports: [
     HeaderComponent,
     MaterialModule,

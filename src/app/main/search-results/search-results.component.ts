@@ -1,10 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { apiData } from '../../shared/apiData';
 import { SearchItem } from '../../shared/models/search-item.model';
 
 @Component({
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',
-  styleUrls: ['./search-results.component.sass']
+  styleUrls: ['./search-results.component.sass'],
+  providers: [ apiData ]
 })
 export class SearchResultsComponent implements OnInit {
   @Input() items: SearchItem[] = [];
@@ -13,12 +15,16 @@ export class SearchResultsComponent implements OnInit {
   @Input() searchRequest: string = '';
   filteredItems: SearchItem[] = [];
 
+  constructor(private httpService: apiData){}
+
   ngOnInit(): void {  };
 
   onOpenItem(id: SearchItem['id']) { console.log('https://www.youtube.com/watch?v=' + id) };
 
-  onSearchRequest(searchRequest: string) {
-    this.filteredItems = this.items
+  async onSearchRequest(searchRequest: string) {
+    await (await this.httpService.getData(searchRequest, 'search'))
+      .subscribe((data: any) => this.items = data.items);
+    this.filter('');
   }
 
   filter(sentence: string) {

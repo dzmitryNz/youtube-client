@@ -2,7 +2,7 @@
 
 [Figma mockup](https://www.figma.com/file/tS3Zqk138yXUmRxSWKDv4r/YouTube-client?node-id=0%3A1)
 
-## Angular. RxJS & Observables. HTTP task
+## [Angular. RxJS & Observables. HTTP task](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/rxjs-observables-http.md#youtube-client-app)
 
 In the scope of the task, you are to implement some features using RxJS. In addition, the goal is to start using real YouTube API for requesting data in the app.
 
